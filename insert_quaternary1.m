@@ -3,9 +3,8 @@ format long
 global TK R gamma_exp X r q q1 gamma_cal Y 
 %% eisagogi dedomenwn 
 components=4;
-% [TK,PmmHg,X1,X2,X3,Y1,Y2,Y3,gamma_exp1] = importfile_QUAD_EXCEL('quaternary1_?.xlsx','Sheet1',4,37);
-IMPORT_QUERN_WITH_GAMMA
-id = [39 3 44 47];% antoiine id
+[TK,Pmmhg,X1,X2,X3,Y1,Y2,Y3,gamma_exp1,gamma_exp2,gamma_exp3,gamma_exp4] = importfile2('quaternary1_GAMMA.xlsx','SHEET1',4,37);%IMPORT_QUERN_WITH_GAMMA
+id = [39 3 44 47];% antoiine id ---> load('AntoineTable.mat')
 % TK=TK(1); % metrisis stin idia T  
 T=TK-273.15; % se c
 [names A B C] = AntoineGet(id);
