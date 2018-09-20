@@ -4,7 +4,16 @@ Dumin=-10000; Dumax=10000;
 %% insert GA parameters
 % triadiko diadiko migma???
 du_number=components*(components-1);
-hybrid=1; % 1 gia na treksi to ivridio 0 mono o genetikos
+prompt = 'Do you want run the Hybrid algorithm? Y/N [Y]: ';
+str = input(prompt,'s');
+if isempty(str)
+    str = 'Y';
+end
+if str=='Y'
+    hybrid=1;% 1 gia na treksi to ivridio 0 mono o genetikos
+else
+    hybrid=0;
+end
 stop_critirion=1; %otan den allazei simantika i lisi
 switch components
     case 2

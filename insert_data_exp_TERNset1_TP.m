@@ -4,7 +4,7 @@ global TK R gamma_exp X r q q1 gamma_cal Y
 %% eisagogi dedomenwn 
 components=3;
 [TK,Pbar,Y1,X1,Y2,X2] = importfile1('TERNARY_revised.DAT',3, 41);
-id = [37 63 44]; % antoiine id
+id = [37 63 44]; % antoiine id ---> load('AntoineTable.mat')
 %TK=TK(1); % metrisis stin idia T  
 T=TK-273.15; % se c
 [names A B C] = AntoineGet(id);
@@ -16,7 +16,7 @@ X3 = 1-X1-X2;  Y3=1-Y1-Y2;            % calculate x3
 X  = [X1 X2 X3]; Y=[Y1 Y2 Y3]; % create column array of x1 & x2 & X3
 for i=1:length( X1 )
     for k=1:3
-    gamma_exp(i,k)=Y(i,k).*Pbar(i)./(X(i,k).*Ps(k));
+    gamma_exp(i,k)=Y(i,k).*Pbar(i)./(X(i,k).*Ps(i,k));
     end
 end
 gamma_exp;

@@ -4,7 +4,7 @@ global TK R gamma_exp X r q q1 gamma_cal Y
 %% eisagogi dedomenwn 
 components=3;
 [TK,Pbar,X1,X2,Y1,Y2] = importfileTERN_excel('Acet-CHCl3-meth150.xlsx','Acet-CHCl3-meth2',6,155);
-id = [37 49 2]; % antoiine id
+id = [37 49 2]; % antoiine id ---> load('AntoineTable.mat')
 % TK=TK(1); % metrisis stin idia T  
 T=TK-273.15; % se c
 [names A B C] = AntoineGet(id);

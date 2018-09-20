@@ -4,7 +4,7 @@ global TK R gamma_exp X r q q1 gamma_cal
 %% eisagogi dedomenwn 
 components=2;
 [TK,Pbar,Y1,X1] = importfile('ACET-1OL.DAT',3, 16);
-id = [36 61]; % antoiine id
+id = [36 61]; % antoiine id ---> load('AntoineTable.mat')
 %TK=TK(1); % metrisis stin idia T 
 T=TK-273.15; % se c
 [names A B C] = AntoineGet(id);

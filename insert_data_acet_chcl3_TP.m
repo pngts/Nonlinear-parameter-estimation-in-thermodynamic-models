@@ -4,7 +4,7 @@ global TK R gamma_exp X r q q1 gamma_cal
 %% eisagogi dedomenwn 
 components=2;
 [TK,PmmHg,X1,Y1] = importfile_EXCEL('ACET-CHCL3.xlsx','Sheet1',3,33); % orizoume kai apo pou mexri pou na diavasi
-id = [37 49]; % antoiine id
+id = [37 49]; % antoiine id ---> load('AntoineTable.mat')
 %TK=TK1(1); % metrisis stin idia T 
 T=TK-273.15; % se c
 [names A B C] = AntoineGet(id);
